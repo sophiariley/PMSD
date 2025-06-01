@@ -15,3 +15,5 @@ The platform will promote self-management for patients and provide doctors with 
 - [EHRbase](https://www.ehrbase.org/)
 - [Template Designer](https://oceanhealthsystems.com/software/template-designer)
 - [Archetype Editor](https://oceanhealthsystems.com/software/archetype-editor)
+
+# Documentation
