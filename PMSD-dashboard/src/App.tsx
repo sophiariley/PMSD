@@ -1,12 +1,12 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import { Landing } from "./pages/landing";
+import { PatientLanding } from "./pages/PatientLanding";
 
 function App() {
   // return <div><SectionTitle/></div>;
   return(
     <Router>
       <Routes>
-        <Route path="/" element={<Landing/>}/>
+        <Route path="/" element={<PatientLanding/>}/>
       </Routes>
     </Router>
   )
