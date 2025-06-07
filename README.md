@@ -31,12 +31,12 @@ The platform will promote self-management for patients and provide doctors with 
 ## Typography
 
 - Serif: Scheherazade New
-- Sans Serif: 
+- Sans Serif: Inter
 
 ## Color Scheme
 
 - Black: #363636
-- Gray: #A0A0A0
+- Gray: #A0A0A0cd 
 - Light gray: #F0EFEB
 - Red: #FE322F
 - Yellow: #FFC51E
