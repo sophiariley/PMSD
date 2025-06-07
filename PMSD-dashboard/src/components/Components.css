@@ -1,5 +1,25 @@
-/* The styling for the dashnoard's components */
+/* Typography */
+@font-face {
+    font-family: "Scheherazade New Regular";
+    src: local("Scheherazade_New"), url("../fonts/Scheherazade_New/ScheherazadeNew-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Scheherazade New Bold";
+    src: local("Scheherazade_New"), url("../fonts/Scheherazade_New/ScheherazadeNew-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Scheherazade New Medium";
+    src: local("Scheherazade_New"), url("../fonts/Scheherazade_New/ScheherazadeNew-Medium.ttf") format("truetype");
+  }
+
+
+  
+
+  /* Component styling */
 .sectionTitle {
-    font-family: Scheherazade New;
+    font-family: "Scheherazade New Bold", serif;
     color: #363636;
+    letter-spacing: -0.5px;
 }

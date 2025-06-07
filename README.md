@@ -26,13 +26,14 @@ The platform will promote self-management for patients and provide doctors with 
 
 # Documentation
 
-## Frontend
+# Frontend
 
-# Typography
+## Typography
 
-- Scheherazade New
+- Serif: Scheherazade New
+- Sans Serif: 
 
-# Color Scheme
+## Color Scheme
 
 - Black: #363636
 - Gray: #A0A0A0
