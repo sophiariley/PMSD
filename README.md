@@ -24,9 +24,7 @@ The platform will promote self-management for patients and provide doctors with 
 - [Template Designer](https://oceanhealthsystems.com/software/template-designer)
 - [Archetype Editor](https://oceanhealthsystems.com/software/archetype-editor)
 
-# Documentation
-
-# Frontend
+# Frontend Documentation
 
 ## Typography
 
@@ -36,7 +34,7 @@ The platform will promote self-management for patients and provide doctors with 
 ## Color Scheme
 
 - Black: #363636
-- Gray: #A0A0A0cd 
+- Gray: #A0A0A0cd
 - Light gray: #F0EFEB
 - Red: #FE322F
 - Yellow: #FFC51E
@@ -46,4 +44,14 @@ The platform will promote self-management for patients and provide doctors with 
 
 ## Components
 
+- SectionTitle: The text seen as the titles of _main_ detail components (Health Score, Labor, ...)
+  - Any component using SectionTitle **must** receive a text property that is a string
+- MenuText: The text seen in the menu
+  - Any component using MenuText **must** receive a text property that is a string
+- PatientVerticalMenu: The menu seen by patient users
+  - Built using multiple MenuText components
+
 ## Pages
+
+- PatientLanding: The landing page for a patient
+- PatientProfile: The profile page of a patient
