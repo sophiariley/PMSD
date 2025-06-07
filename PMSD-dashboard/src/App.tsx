@@ -1,9 +1,15 @@
-import SectionTitle from "./components/SectionTitle"
-import "./fonts/Scheherazade_New/ScheherazadeNew-Regular.ttf"
-import "./fonts/Scheherazade_New/ScheherazadeNew-Bold.ttf"
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Landing } from "./pages/landing";
 
 function App() {
-  return <div><SectionTitle/></div>;
+  // return <div><SectionTitle/></div>;
+  return(
+    <Router>
+      <Routes>
+        <Route path="/" element={<Landing/>}/>
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;
