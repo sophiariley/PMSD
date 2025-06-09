@@ -1,4 +1,4 @@
-// The styling of the text in the menu
+// The text in the vertical menu
 import "./Components.css"
 
 type MenuTextProps = {
