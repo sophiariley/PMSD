@@ -23,7 +23,7 @@
 
 /* Component styling */
 .sectionTitle {
-    font-family: "Scheherazade New Bold", serif;
+    font-family: "Scheherazade New Medium", serif;
     color: #363636;
     letter-spacing: -0.5px;
 }
@@ -72,5 +72,62 @@
   height: 7vh;
   background-color: #F0EFEB;
   border-radius: 5px 5px 5px 5px;
+}
+
+.patientLeftGraphDetail-container {
+  display: flex;
+  position: fixed;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+  width: 35vw;
+  height: 90vh;
+  top: 10vh;
+  left: 11vw;
+}
+
+.patientRightGraphDetail-container {
+  position: fixed;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+  right: 1vw;
+  top: 10vh;
+  width: 52.8vw;
+  height: 90vh;
+}
+
+.rightGraphDetailBox-left {
+  border-right: 1px solid #ccc;
+  width: 25vw;
+  height: 25vh;
+}
+
+.rightGraphDetailBox-right {
+  width: 25vw;
+  height: 25vh;
+}
+
+.rightGraphDetailBox-inner-container {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+.rightGraphDetailBox-outer-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40vh;
+  margin-bottom: 2%;
 }
 
