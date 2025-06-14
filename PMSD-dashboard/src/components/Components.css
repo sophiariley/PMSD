@@ -21,12 +21,13 @@
 
 /* ################################################################################################################################## */
 
-/* Component styling */
 .sectionTitle {
     font-family: "Scheherazade New Medium", serif;
     color: #363636;
     letter-spacing: -0.5px;
 }
+
+/* ################################################################################################################################## */
 
 /* TODO: Selected menu item should be #363636. All others should be a lighter shade */
 .menuText {
@@ -35,6 +36,8 @@
   letter-spacing: -0.5px;
   font-weight: 500;
 }
+
+/* ################################################################################################################################## */
 
 .patientVerticalMenu-container {
   position: fixed;             
@@ -57,6 +60,8 @@
   width: 9vw;
 }
 
+/* ################################################################################################################################## */
+
 .patientHeaderBar-container {
   display: flex;
   justify-content: center;
@@ -74,19 +79,31 @@
   border-radius: 5px 5px 5px 5px;
 }
 
+/* ################################################################################################################################## */
+
 .patientLeftGraphDetail-container {
   display: flex;
-  position: fixed;
-  justify-items: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   overflow-y: auto;
-  border-right: 1px solid #ccc;
-  width: 35vw;
-  height: 90vh;
+  position: fixed;
   top: 10vh;
   left: 11vw;
+  width: 35vw;
+  height: 90vh;
+  border-right: 1px solid #ccc;
+  /* padding: 1rem 0; */
+  gap: 1rem;
 }
+
+.patientLeftGraphDetail-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* ################################################################################################################################## */
 
 .patientRightGraphDetail-container {
   position: fixed;
@@ -100,6 +117,8 @@
   width: 52.8vw;
   height: 90vh;
 }
+
+/* ################################################################################################################################## */
 
 .rightGraphDetailBox-left {
   border-right: 1px solid #ccc;
@@ -131,3 +150,24 @@
   margin-bottom: 2%;
 }
 
+/* ################################################################################################################################## */
+
+.healthScoreChart-container {
+    position: relative;
+    width: 25vh;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 2.5vw;
+    
+}
+
+.healthScoreChart-text {
+  transform: translate(-17vh, 0vw);
+  font-family: "Inter", sans-serif;
+  color: #363636;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  font-size: 28px;
+}

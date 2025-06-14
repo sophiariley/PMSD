@@ -5,13 +5,13 @@ import HealthScoreChart from "./HealthScoreChart";
 function PatientLeftGraphDetail () {
     return(
         <div className="patientLeftGraphDetail-container">
-            <div>
+            <div className="patientLeftGraphDetail-section">
                 <SectionTitle text="Health Score"/>
                 {/* TODO: Add graph skeleton */}
-                <HealthScoreChart score={100}/>
+                <HealthScoreChart score={70}/>
             </div>
 
-            <div>
+            <div className="patientLeftGraphDetail-section">
                 <SectionTitle text = "Risiko Profil"/>
                 {/* TODO: Add graph skeletons */}
             </div>
