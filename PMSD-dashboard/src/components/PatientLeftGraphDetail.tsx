@@ -1,5 +1,6 @@
 import "./Components.css"
 import SectionTitle from "./SectionTitle";
+import HealthScoreChart from "./HealthScoreChart";
 
 function PatientLeftGraphDetail () {
     return(
@@ -7,6 +8,7 @@ function PatientLeftGraphDetail () {
             <div>
                 <SectionTitle text="Health Score"/>
                 {/* TODO: Add graph skeleton */}
+                <HealthScoreChart score={100}/>
             </div>
 
             <div>
