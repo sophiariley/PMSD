@@ -29,6 +29,14 @@
 
 /* ################################################################################################################################## */
 
+.sectionSubText{
+    font-family: "Scheherazade New Regular", serif;
+    color: #363636;
+    letter-spacing: -0.5px;
+}
+
+/* ################################################################################################################################## */
+
 /* TODO: Selected menu item should be #363636. All others should be a lighter shade */
 .menuText {
   font-family: "Inter", sans-serif;
@@ -124,11 +132,16 @@
   border-right: 1px solid #ccc;
   width: 25vw;
   height: 25vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .rightGraphDetailBox-right {
   width: 25vw;
   height: 25vh;
+  display: flex;
+  justify-content: center;
 }
 
 .rightGraphDetailBox-inner-container {
@@ -160,7 +173,7 @@
     justify-content: center;
     align-items: center;
     left: 2.5vw;
-    
+
 }
 
 .healthScoreChart-text {
