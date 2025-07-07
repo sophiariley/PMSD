@@ -39,7 +39,7 @@ It's recommended to use [Swagger UI](https://swagger.io/tools/swagger-ui/) in or
 
 Spin up a preconfigured EHRBase postgres database by running the following command in Docker's terminal:
 
-````docker run --network ehrbase-net --name ehrbase-postgres \
+`docker run --network ehrbase-net --name ehrbase-postgres \
 -e POSTGRES_USER=postgres \
 -e PASSWORD=postgres \
 -e EHRBASE_USER=ehrbase_restricted \
@@ -47,10 +47,10 @@ Spin up a preconfigured EHRBase postgres database by running the following comma
 -e EHRBASE_USER_ADMIN=ehrbase \
 -e EHRBASE_PASSWORD_ADMIN=ehrbase \
 -d -p 5432:5432 \
-ehrbase/ehrbase-v2-postgres:16.2```
+ehrbase/ehrbase-v2-postgres:16.2`
 
 Start a local instance of EHRBase by running the following command in Docker's terminal:
-```docker run --network ehrbase-net --name ehrbase \
+`docker run --network ehrbase-net --name ehrbase \
 -e DB_URL=jdbc:postgresql://ehrbase-postgres:5432/ehrbase \
 -e DB_USER=ehrbase_restricted \
 -e DB_PASS=ehrbase_restricted \
@@ -59,7 +59,7 @@ Start a local instance of EHRBase by running the following command in Docker's t
 -e SERVER_NODENAME=local.ehrbase.org \
 -e SPRING_PROFILES_ACTIVE=local \
 -d -p 8080:8080 \
-ehrbase/ehrbase```
+ehrbase/ehrbase`
 
 ## Step 3: Prepare a Template
 Use openEHR's [Clinical Knowledge Manager (CKM)](https://ckm.openehr.org/ckm/) to obtain an information model. Once an informational model has been selected, download its ADL file.
@@ -77,21 +77,21 @@ Give your template a name and export it as an operational template (.opt).
 
 ## Step 4: Upload Your Template
 Run the following bash command to upload your template into EHRBase:
-```curl -X POST http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4   -H "Content-Type: application/xml"   --data-binary @YOUR-TEMPLATE-NAME.opt```
+`curl -X POST http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4   -H "Content-Type: application/xml"   --data-binary @YOUR-TEMPLATE-NAME.opt`
 
 You can check if your template was loaded by running the following bash command:
-```curl -X GET http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4```
+`curl -X GET http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4`
 
 make sure to take note of your template's ID!
 
 ## Step 4: Create an EHR
 Run the following bash command to create an electronic health record:
-```curl -v -X POST http://localhost:8080/ehrbase/rest/openehr/v1/ehr```
+`curl -v -X POST http://localhost:8080/ehrbase/rest/openehr/v1/ehr`
 
 This will return an ID for your EHR. Please note this down!
 
 You can check if your EHR was properly created by running the following command:
-curl -X GET http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID
+`curl -X GET http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID`
 
 ## Step 5: Prepare a Composition
 Go to CaboLabs' openEHR toolkit and upload your template. Once uploaded, click on it. This will take you to a page of tools you can use with your template. 
@@ -101,7 +101,7 @@ Go to CaboLabs' openEHR toolkit and upload your template. Once uploaded, click o
 Select "Canonical Instance Generator" and click "Generate" to generate a composition for your template. Save this JSON file to the same file path as your template.
 
 Run the following bash command:
-curl -X POST "http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID/composition" -H "Content-Type: application/json" -d @YOUR COMPOSITION.json
+`curl -X POST "http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID/composition" -H "Content-Type: application/json" -d @YOUR COMPOSITION.json`
 
 
 Congratulations! You have everything you need to use EHRBase :)
