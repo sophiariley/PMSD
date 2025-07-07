@@ -25,14 +25,17 @@
     font-family: "Scheherazade New Medium", serif;
     color: #363636;
     letter-spacing: -0.5px;
+    font-size: 28px;
 }
 
 /* ################################################################################################################################## */
 
 .sectionSubText{
-    font-family: "Scheherazade New Regular", serif;
-    color: #363636;
-    letter-spacing: -0.5px;
+  font-family: "Inter", sans-serif;
+  color: #363636;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 /* ################################################################################################################################## */
@@ -43,6 +46,22 @@
   color: #363636;
   letter-spacing: -0.5px;
   font-weight: 500;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.menuText:link, .menuText:visited {
+  text-decoration: none;
+}
+
+.menuText:hover {
+  text-decoration: underline;
+   color: #363636;
+}
+
+.activeMenuText {
+  text-decoration: underline !important;
 }
 
 /* ################################################################################################################################## */
@@ -66,6 +85,8 @@
 .menuDivider {
   border-top: 1px solid #ccc;
   width: 9vw;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* ################################################################################################################################## */
@@ -172,7 +193,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 2.5vw;
+    left: 2vw;
 
 }
 
@@ -184,3 +205,46 @@
   font-weight: 500;
   font-size: 28px;
 }
+
+/* ############################################################### */
+
+.symptomForm-container {
+  position: fixed;
+  top: 10vh;
+  left: 11vw;
+  height: 90vh;
+  width: 60vw;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+  color: #363636;
+  overflow-y: auto;
+}
+
+.symptomForm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.symptomForm-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #F0EFEB;
+  color: #363636;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.symptomForm-button:hover {
+  background-color: #A0A0A0cd;
+  border-color: #363636 !important;
+}
+
+/* .symptomForm-radioButton-container {
+  display: "flex";
+  flex-direction: "column";
+  align-items: "center";
+} */

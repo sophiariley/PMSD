@@ -2,14 +2,13 @@
 import MenuText from "./MenuText";
 import "./Components.css"
 
-
 function PatientVerticalMenu() {
     return (
         <div className="patientVerticalMenu-container">
             <div className="patientVeticalMenu">
-                <MenuText text = "Dashboard"/>
+                <MenuText text = "Dashboard" to="/"/>
                 <MenuText text = "Profil"/>
-                <MenuText text = "Notizen"/>
+                <MenuText text="Notizen" to="/notes" />
                 <MenuText text = "Labor"/>
                 <MenuText text = "Aktivität"/>
                 <MenuText text = "Ernährung"/>
