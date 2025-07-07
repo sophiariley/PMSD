@@ -118,12 +118,7 @@ Run the following bash command:
 curl -X POST "http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID/composition" -H "Content-Type: application/json" -d @YOUR COMPOSITION.json
 ```
 
-
 Congratulations! You have everything you need to use EHRBase :)
-
-
-
-
 
 # Frontend Documentation
 
