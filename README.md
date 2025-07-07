@@ -91,7 +91,7 @@ You can check if your template was loaded by running the following bash command:
 curl -X GET http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4
 ```
 
-make sure to take note of your template's ID!
+This command will also return your template's ID. **Make sure to note this down!**
 
 ## Step 4: Create an EHR
 Run the following bash command to create an electronic health record:
@@ -99,11 +99,11 @@ Run the following bash command to create an electronic health record:
 curl -v -X POST http://localhost:8080/ehrbase/rest/openehr/v1/ehr
 ```
 
-This will return an ID for your EHR. Please note this down!
+**This will return an ID for your EHR. Please note this down!**
 
 You can check if your EHR was properly created by running the following command:
 ```
-curl -X GET http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID\
+curl -X GET http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID
 ```
 
 ## Step 5: Prepare a Composition
