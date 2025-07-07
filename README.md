@@ -70,15 +70,15 @@ ehrbase/ehrbase
 Use openEHR's [Clinical Knowledge Manager (CKM)](https://ckm.openehr.org/ckm/) to obtain an information model. Once an informational model has been selected, download its ADL file.
 
 Open the Template Designer. Go to "Tools" -> "Knowledge Repository" -> "Edit Repository List."
-![alt text](Template Designer screenshot.png) 
+![Template Designer screenshot](https://github.com/user-attachments/assets/fc5957de-a96e-447a-ba63-78a5b6b65917)
 
 Set the paths to "Archetype Files," "Working Archetype Files," and "Template Files" to the path where your ADL file is stored. If done properly, you should see archetypes appear on the right.
-![alt text](Archetype window.png) 
+![Archetype window](https://github.com/user-attachments/assets/96fe91a7-5338-46df-a467-62117906dbb8)
 
 Now you can create a template. Simply drag and drop your archetype from the right window into the left one. If desired, fill any open slots with more archetypes. Note that templates need an archetype of type _Composition_ as the root element.
 
 Give your template a name and export it as an operational template (.opt).
-![alt text](Export as OPT.png) 
+![Export as OPT](https://github.com/user-attachments/assets/26c232b5-a020-4dd4-afe8-f514f80b4868)
 
 ## Step 3: Upload Your Template
 Run the following bash command to upload your template into EHRBase:
@@ -109,7 +109,7 @@ curl -X GET http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID
 ## Step 5: Prepare a Composition
 Go to CaboLabs' openEHR toolkit and upload your template. Once uploaded, click on it. This will take you to a page of tools you can use with your template. 
 
-![alt text](Template tools.png) 
+![Template tools](https://github.com/user-attachments/assets/e86536fe-5dcf-4015-88aa-b7550358fb2f)
 
 Select "Canonical Instance Generator" and click "Generate" to generate a composition for your template. Save this JSON file to the same file path as your template.
 
