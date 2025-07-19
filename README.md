@@ -120,6 +120,14 @@ curl -X POST "http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID/comp
 
 Congratulations! You have everything you need to use EHRBase :)
 
+# Archetypes and Templates Used
+## Archetypes
+- **openEHR-EHR-CLUSTER.symptom_info.v1** - records name, intensity, date, and time of an episode of a reported symptom
+- **openEHR-EHR-COMPOSITION.self_reported_data.v1** - a generic container for information provided by a patient
+
+## Templates
+- **Self_reported_symptoms** - combines the openEHR-EHR-COMPOSITION.self_reported_data.v1 (root) and openEHR-EHR-CLUSTER.symptom_info.v1
+
 # Frontend Documentation
 
 ## Typography
