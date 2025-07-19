@@ -128,7 +128,7 @@ Congratulations! You have everything you need to use EHRBase :)
 ## Templates
 - **Self_reported_symptoms** - combines the openEHR-EHR-COMPOSITION.self_reported_data.v1 (root) and openEHR-EHR-CLUSTER.symptom_info.v1
 
-# Frontend Documentation
+# Frontend
 
 ## Typography
 
