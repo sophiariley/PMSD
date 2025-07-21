@@ -18,6 +18,7 @@ The platform will promote self-management for patients and provide doctors with 
 ## General Information
 ### Technology Used
 
+- [Visual Studio Code](https://code.visualstudio.com/)
 - [React](https://react.dev/)
 - [Vite](https://vite.dev/)
 - [OpenEHR](https://openehr.org/)
