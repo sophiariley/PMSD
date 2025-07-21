@@ -120,6 +120,9 @@ curl -X POST "http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID/comp
 
 Congratulations! You have everything you need to use EHRBase :)
 
+## Running the Dashboard
+In order to run the dashboard, you need to have [npm and Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed. You can then run `npm dev run` to run the dashboard. To open it in a new window, enter `o`.
+
 # Archetypes and Templates Used
 ## Archetypes
 - **openEHR-EHR-CLUSTER.symptom_info.v1** - records name, intensity, date, and time of an episode of a reported symptom
