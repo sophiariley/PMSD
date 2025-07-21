@@ -15,8 +15,8 @@ This project proposes building a web-based dashboard where:
 
 The platform will promote self-management for patients and provide doctors with better insights into patient progress between visits. Previous efforts in this space often lacked real interactivity, scalability, or privacy control. Our solution aims to cover all these aspects using modern web development practices and cloud-based infrastructure.
 
-# General Information
-## Technology Used
+## General Information
+### Technology Used
 
 - [React](https://react.dev/)
 - [Vite](https://vite.dev/)
@@ -25,23 +25,23 @@ The platform will promote self-management for patients and provide doctors with 
 - [Template Designer](https://oceanhealthsystems.com/software/template-designer)
 - [Archetype Editor](https://oceanhealthsystems.com/software/archetype-editor)
 
-## Running the Dashboard
+### Running the Dashboard
 In order to run the dashboard, you need to have [npm and Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed. You can then run `npm dev run` from the terminal in to start the dashboard. To open it in a new window, enter `o`.
 
-## Archetypes and Templates Used
-### Archetypes
+### Archetypes and Templates Used
+#### Archetypes
 - **openEHR-EHR-CLUSTER.symptom_info.v1** - records name, intensity, date, and time of an episode of a reported symptom
 - **openEHR-EHR-COMPOSITION.self_reported_data.v1** - a generic container for information provided by a patient
 
-### Templates
+#### Templates
 - **Self_reported_symptoms** - combines the openEHR-EHR-COMPOSITION.self_reported_data.v1 (root) and openEHR-EHR-CLUSTER.symptom_info.v1
 
-## Current Errors
-### Error in Formatting Composition
+### Current Errors
+#### Error in Formatting Composition
 On the "Notizen" page, a patient user is able to submit a form that documents the name of a symptom, the date and time it was experienced, and its intensity. This information is then used to create a composotion, as seem in lines 70-92 of `SymptomForm.tsx`. However, submitting the form throws a 400 error:
 `Error: 400 Could not consume Parts [category/value, context/start_time, context/symptom_sign_name, context/setting/value, context/date_time, context/intensity]`
 
-# EHRBase Setup
+## EHRBase Setup
 
 This section of the documentation will walk you through on how to set up a local instance of EHRBase to use in conjunction with this web application. This how-to guide primarily uses bash commands. 
 
@@ -53,7 +53,7 @@ While not required, you can use [Archetype Editor](https://oceanhealthsystems.co
 It's recommended to use [Swagger UI](https://swagger.io/tools/swagger-ui/) in order to see how to interact with EHRBase's REST API. The appropriate link will look something like ```http://localhost:8080/ehrbase/swagger-ui/index.html#/```
 
 
-## Step 1: Start PostgresDB and EHRBase
+### Step 1: Start PostgresDB and EHRBase
 
 Spin up a preconfigured EHRBase postgres database by running the following command in Docker's terminal:
 
@@ -83,7 +83,7 @@ docker run --network ehrbase-net --name ehrbase \
 ehrbase/ehrbase
 ```
 
-## Step 2: Prepare a Template
+### Step 2: Prepare a Template
 Use openEHR's [Clinical Knowledge Manager (CKM)](https://ckm.openehr.org/ckm/) to obtain an information model. Once an informational model has been selected, download its ADL file.
 
 Open the Template Designer. Go to "Tools" -> "Knowledge Repository" -> "Edit Repository List."
@@ -97,7 +97,7 @@ Now you can create a template. Simply drag and drop your archetype from the righ
 Give your template a name and export it as an operational template (.opt).
 ![Export as OPT](https://github.com/user-attachments/assets/26c232b5-a020-4dd4-afe8-f514f80b4868)
 
-## Step 3: Upload Your Template
+### Step 3: Upload Your Template
 Run the following bash command to upload your template into EHRBase:
 ```
 curl -X POST http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/adl1.4   -H "Content-Type: application/xml"   --data-binary @YOUR-TEMPLATE-NAME.opt
@@ -110,7 +110,7 @@ curl -X GET http://localhost:8080/ehrbase/rest/openehr/v1/definition/template/ad
 
 This command will also return your template's ID. **Make sure to note this down!**
 
-## Step 4: Create an EHR
+### Step 4: Create an EHR
 Run the following bash command to create an electronic health record:
 ```
 curl -v -X POST http://localhost:8080/ehrbase/rest/openehr/v1/ehr
@@ -123,7 +123,7 @@ You can check if your EHR was properly created by running the following command:
 curl -X GET http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID
 ```
 
-## Step 5: Prepare a Composition
+### Step 5: Prepare a Composition
 Go to CaboLabs' openEHR toolkit and upload your template. Once uploaded, click on it. This will take you to a page of tools you can use with your template. 
 
 ![Template tools](https://github.com/user-attachments/assets/e86536fe-5dcf-4015-88aa-b7550358fb2f)
@@ -137,14 +137,14 @@ curl -X POST "http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID/comp
 
 Congratulations! You have everything you need to use EHRBase :)
 
-# Frontend
+## Frontend
 
-## Typography
+### Typography
 
 - Serif: Scheherazade New
 - Sans Serif: Inter
 
-## Color Scheme
+### Color Scheme
 
 - Black: #363636
 - Gray: #A0A0A0cd
