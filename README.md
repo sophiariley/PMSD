@@ -45,7 +45,7 @@ On the "Notizen" page, a patient user is able to submit a form that documents th
 
 This section of the documentation will walk you through on how to set up a local instance of EHRBase to use in conjunction with this web application. This how-to guide primarily uses bash commands. 
 
-## Step 0: Set Up
+### Step 0: Set Up
 This tutorial requires the use of [Docker](https://www.docker.com/products/docker-desktop/) and [Template Designer](https://oceanhealthsystems.com/software/template-designer). A profile with (CaboLabs' openEHR toolkit)[https://toolkit.cabolabs.com/] is also required.
 
 While not required, you can use [Archetype Editor](https://oceanhealthsystems.com/software/archetype-editor) to edit ADL files from openEHR's Clinical Knowledge Manager.
