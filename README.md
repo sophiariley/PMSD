@@ -15,6 +15,7 @@ This project proposes building a web-based dashboard where:
 
 The platform will promote self-management for patients and provide doctors with better insights into patient progress between visits. Previous efforts in this space often lacked real interactivity, scalability, or privacy control. Our solution aims to cover all these aspects using modern web development practices and cloud-based infrastructure.
 
+# General Information
 ## Technology Used
 
 - [React](https://react.dev/)
@@ -23,6 +24,22 @@ The platform will promote self-management for patients and provide doctors with 
 - [EHRbase](https://www.ehrbase.org/)
 - [Template Designer](https://oceanhealthsystems.com/software/template-designer)
 - [Archetype Editor](https://oceanhealthsystems.com/software/archetype-editor)
+
+## Running the Dashboard
+In order to run the dashboard, you need to have [npm and Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed. You can then run `npm dev run` from the terminal in to start the dashboard. To open it in a new window, enter `o`.
+
+## Archetypes and Templates Used
+### Archetypes
+- **openEHR-EHR-CLUSTER.symptom_info.v1** - records name, intensity, date, and time of an episode of a reported symptom
+- **openEHR-EHR-COMPOSITION.self_reported_data.v1** - a generic container for information provided by a patient
+
+### Templates
+- **Self_reported_symptoms** - combines the openEHR-EHR-COMPOSITION.self_reported_data.v1 (root) and openEHR-EHR-CLUSTER.symptom_info.v1
+
+## Current Errors
+### Error in Formatting Composition
+On the "Notizen" page, a patient user is able to submit a form that documents the name of a symptom, the date and time it was experienced, and its intensity. This information is then used to create a composotion, as seem in lines 70-92 of `SymptomForm.tsx`. However, submitting the form throws a 400 error:
+`Error: 400 Could not consume Parts [category/value, context/start_time, context/symptom_sign_name, context/setting/value, context/date_time, context/intensity]`
 
 # EHRBase Setup
 
@@ -119,23 +136,6 @@ curl -X POST "http://localhost:8080/ehrbase/rest/openehr/v1/ehr/YOUR EHR ID/comp
 ```
 
 Congratulations! You have everything you need to use EHRBase :)
-
-## Running the Dashboard
-In order to run the dashboard, you need to have [npm and Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) installed. You can then run `npm dev run` from the terminal in to start the dashboard. To open it in a new window, enter `o`.
-
-# Archetypes and Templates Used
-## Archetypes
-- **openEHR-EHR-CLUSTER.symptom_info.v1** - records name, intensity, date, and time of an episode of a reported symptom
-- **openEHR-EHR-COMPOSITION.self_reported_data.v1** - a generic container for information provided by a patient
-
-## Templates
-- **Self_reported_symptoms** - combines the openEHR-EHR-COMPOSITION.self_reported_data.v1 (root) and openEHR-EHR-CLUSTER.symptom_info.v1
-
-# Current Errors
-## Error in Formatting Composition
-On the "Notizen" page, a patient user is able to submit a form that documents the name of a symptom, the date and time it was experienced, and its intensity. This information is then used to create a composotion, as seem in lines 70-92 of `SymptomForm.tsx`. However, submitting the form throws a 400 error:
-`Error: 400 Could not consume Parts [category/value, context/start_time, context/symptom_sign_name, context/setting/value, context/date_time, context/intensity]`
-
 
 # Frontend
 
